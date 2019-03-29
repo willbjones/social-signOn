@@ -14,10 +14,11 @@
 			</div>
 			<div class="card-body">
 				<div class="card-text">
-					<img th:src="${client=='Facebook'} ? ${picture.data.url} : ${picture}" alt="no image">
+					<img th:src="${profile.imageUrl}" alt="no image">
 				</div>
 				<div class="card-text">
-					<p th:text="'Hello, ' + ${name} + '!'" />
+					<p th:text="'Hello, ' + ${profile.name} + '!'" />
+					<p th:text="'email address, ' + ${profile.email} + '!'" />
 					<p sec:authentication="username"></p>  
 				</div>
 			</div>

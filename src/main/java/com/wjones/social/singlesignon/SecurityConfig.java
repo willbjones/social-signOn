@@ -18,7 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http
           .authorizeRequests()
-            .antMatchers("/oauth_login", "/login**", "/logout**", "/oauth2/authorization/**", "/**/*.css", "/**/*.js", "/webjars/**").permitAll() /*, "/login/oauth2/code/**"*/
+            .antMatchers("/oauth_login", "/login**", "/logout**", "/register", "/oauth2/authorization/**", "/**/*.css", "/**/*.js", "/webjars/**").permitAll() /*, "/login/oauth2/code/**"*/
           .anyRequest().authenticated()
             .and()
           .oauth2Login().loginPage("/login").defaultSuccessUrl("/loginSuccess", true)
